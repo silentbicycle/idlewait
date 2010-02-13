@@ -1,0 +1,24 @@
+.TH IDLEWAIT 1 idlewait
+.SH NAME
+idlewait \- suspend execution until system load is low
+.SH SYNOPSIS
+.B idlewait
+.RB load
+.RB [ max_wait ]
+.SH DESCRIPTION
+.NM
+idlewait waits until the system load drops under a given level, or an optional
+maximum number of seconds has passed.
+.SH EXAMPLES
+Wait until system load is below 1.7 to run backups:
+.IP
+.B idlewait 1.7; backups
+.PP
+Same, but with a max wait of 600 seconds:
+.IP
+.B idlewait 1.7 600; backups
+.PP
+.SH SEE ALSO
+sleep(1), getloadavg(3)
+.SH AUTHOR
+Scott Vokes <vokes.s@gmail.com>
