@@ -1,0 +1,2 @@
+idlewait sleeps until the system load (from getloadavg()) falls below a
+certain number, or until an optional max number of seconds pass.
